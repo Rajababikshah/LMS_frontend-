@@ -1,0 +1,355 @@
+.footer-section {
+  background: #23262f;
+  color: #fff;
+  padding: 0 0 32px 0;
+  padding-top: 30px;
+  margin-bottom: 0px;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 48px 0 32px 0;
+  border-bottom: 1px solid #2e3037;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2px;
+  padding-top: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  min-width: 260px;
+  max-width: 320px;
+  margin-left: 0;
+  margin-right: 0;
+  align-self: flex-start;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  justify-content: center;
+}
+
+.footer-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.footer-btn {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.footer-btn.orange {
+  background: #ff6b3d;
+  color: #fff;
+}
+.footer-btn.dark {
+  background: #2e3037;
+  color: #fff;
+}
+
+.footer-stats {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 16px;
+}
+.footer-stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+}
+  .footer-stat {
+    padding: 0 16px;
+  }
+.footer-stat-label {
+.footer-top-left {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-top-left h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  text-align: left;
+}
+.footer-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 0;
+}
+.footer-top-right {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-stats {
+  display: flex;
+  gap: 48px;
+}
+}
+
+.footer-brand {
+  min-width: 260px;
+  max-width: 320px;
+  margin-left: 0;
+  margin-right: 0;
+  align-self: flex-start;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.logo-icon {
+  font-size: 2rem;
+  color: #ff6b3d;
+}
+.logo-text {
+  font-size: 1.2rem;
+}
+.footer-brand p {
+  color: #bdbdbd;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+.footer-social {
+  display: flex;
+  gap: 8px;
+}
+.footer-social a {
+  background: #2e3037;
+  border-radius: 4px;
+  padding: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+    text-decoration: none;
+}
+.footer-social a.active {
+  background: #ff6b3d;
+}
+.footer-social a:hover {
+  background: #ff6b3d;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  justify-content: center;
+}
+.footer-links h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+.footer-links li {
+  color: #bdbdbd;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: block;
+}
+.footer-links .become-instructor {
+  color: #ff6b3d;
+  font-weight: 600;
+  position: relative;
+  display: block;
+}
+.footer-links .become-instructor .arrow {
+  margin-left: 8px;
+}
+.footer-apps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.app-btn {
+  background: #2e3037;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+}
+.app-btn.app-store {
+  background: #fff;
+  color: #23262f;
+}
+.app-btn.play-store {
+  background: #fff;
+  color: #23262f;
+}
+
+
+/* ================= FOOTER RESPONSIVE ================= */
+
+/* -------- Large Tablets -------- */
+@media (max-width: 1200px) {
+
+  .footer-top,
+  .footer-bottom {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+
+
+/* -------- Tablets -------- */
+@media (max-width: 992px) {
+
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+    padding-top: 36px;
+    padding-bottom: 28px;
+
+  .footer-top-left {
+    align-items: center;
+  }
+
+  .footer-top-right {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  .footer-brand {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 12px;
+  }
+
+}
+
+
+/* -------- Large Mobile -------- */
+@media (max-width: 768px) {
+
+  .footer-top-left h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .footer-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .footer-links h4 {
+    text-align: center;
+    letter-spacing: 0.2px;
+  }
+
+  .footer-links ul {
+    text-align: center;
+    line-height: 1.6;
+  }
+
+}
+
+
+/* -------- Small Mobile -------- */
+@media (max-width: 480px) {
+
+  .footer-section {
+    padding-top: 20px;
+  }
+
+  .footer-top {
+    padding: 32px 16px;
+  }
+
+  .footer-bottom {
+    padding: 20px 16px;
+  }
+
+  .footer-stat-value {
+    font-size: 1.3rem;
+  }
+
+  .footer-stat-label {
+    font-size: 0.9rem;
+    color: #e6e6e6;
+  }
+
+  /* make app buttons full width and clearer on mobile */
+  .app-btn{ display:block; width:100%; padding:12px 14px; border-radius:8px; font-weight:700 }
+  .app-btn.app-store, .app-btn.play-store{ background:#fff; color:#23262f }
+
+  /* larger tappable social icons */
+  .footer-social a{ padding:10px; border-radius:8px }
+}
+} 

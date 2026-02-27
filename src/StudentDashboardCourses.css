@@ -1,0 +1,475 @@
+/* Instructor Card Layout for Teachers Page */
+.instructor-card {
+  padding: 0;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.instructor-card-img {
+  height: 220px;
+  object-fit: cover;
+}
+.instructor-card-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 140px;
+  padding-top: 12px;
+}
+.instructor-card-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+.instructor-card-role {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+.instructor-card-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 12px 0 0 0;
+  width: 100%;
+  justify-content: center;
+}
+.instructor-card-rating {
+  color: #ff6b35;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.instructor-card-students {
+  color: #23262f;
+  font-size: 0.98rem;
+}
+.instructor-card-btn {
+  width: 100%;
+  margin-top: 16px;
+  background: #fff6f1;
+  color: #ff6b35;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  padding: 12px 0;
+  transition: background 0.2s, color 0.2s;
+}
+.instructor-card-btn:hover {
+  background: #ff6b35;
+  color: #fff;
+}
+/* Instructor Card Custom Styles */
+.instructor-card-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 140px;
+}
+.instructor-card-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 12px;
+}
+.instructor-card-role {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+.instructor-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+.instructor-card-rating {
+  color: #ff6b35;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.instructor-card-students {
+  color: #23262f;
+  font-size: 0.98rem;
+}
+.instructor-card-btn {
+  width: 100%;
+  margin-top: auto;
+  background: #fff6f1;
+  color: #ff6b35;
+}
+/* Pagination Section */
+.student-dashboard-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 36px 0 0 0;
+}
+.student-dashboard-pagination-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff6f1;
+  border: none;
+  color: #23262f;
+  font-size: 1.08rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  outline: none;
+}
+.student-dashboard-pagination-btn:hover {
+  background: #ffede3;
+}
+.student-dashboard-pagination-active {
+  background: #ff6b35 !important;
+  color: #fff !important;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(255,107,53,0.10);
+}
+.student-dashboard-pagination-faded {
+  background: #fff6f1;
+  color: #ff6b35;
+  opacity: 0.5;
+}
+.student-dashboard-pagination-circle {
+  background: #fff6f1;
+  color: #ff6b35;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+/* Course Grid (from StudentDashboard.css) */
+.student-dashboard-course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin: 0 auto 0 auto;
+  max-width: 1120px;
+  padding-bottom: 8px;
+  overflow-x: unset;
+}
+.student-dashboard-course-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(40,40,40,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  border: 1.5px solid #f5f5f5;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.2s, border 0.2s;
+  height: 100%;
+}
+.student-dashboard-course-card:hover {
+  box-shadow: 0 4px 24px rgba(40,40,40,0.10);
+  border: 1.5px solid #ff6b35;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px #0001;
+    /* border removed */
+    margin: 0 auto 32px auto;
+    max-width: 1100px;
+    padding: 0;
+}
+.student-dashboard-course-content {
+  padding: 18px 16px 12px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+}
+.student-dashboard-course-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #23262f;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.student-dashboard-course-subtitle {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.student-dashboard-course-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+.student-dashboard-course-btn {
+  background: #fff6f1;
+  color: #ff6b35;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
+  border-bottom: none;
+  white-space: nowrap;
+}
+.student-dashboard-course-btn:hover {
+  background: #ff6b35;
+  color: #fff;
+}
+.student-dashboard-course-status {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3bb77e;
+  margin-left: 8px;
+}
+.student-dashboard-course-card:last-child .student-dashboard-course-status {
+  color: #3bb77e;
+}
+.student-dashboard-course-card:nth-child(2) .student-dashboard-course-status {
+  color: #3bb77e;
+}
+.student-dashboard-course-card:last-child .student-dashboard-course-btn {
+  border-bottom: none;
+}
+.student-dashboard-course-card .student-dashboard-course-btn {
+  border-bottom: none;
+}
+
+
+
+
+/* Filter Section */
+.student-dashboard-courses-filters-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 20px;
+  max-width: 1120px;
+  margin: 0 auto 32px auto;
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Each Filter Column */
+.student-dashboard-courses-filter-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
+  flex: 1 1 0;
+}
+
+.student-dashboard-courses-filter-col:first-child {
+  min-width: 180px;
+  max-width: 260px;
+  flex: 1 1 0;
+  margin-right: 0;
+/* Make search input placeholder text black */
+.student-dashboard-courses-search::placeholder {
+  color: #23262f;
+  opacity: 1; 
+}
+}
+
+/* Labels */
+.student-dashboard-courses-filter-label {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* Search Wrapper */
+.student-dashboard-courses-search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Search Icon */
+.student-dashboard-courses-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #c4c4c4;
+}
+
+/* Search Input */
+
+.student-dashboard-courses-search,
+.student-dashboard-courses-sort,
+.student-dashboard-courses-status,
+.student-dashboard-courses-teacher {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+.student-dashboard-courses-search:focus {
+  outline: none;
+  border-color: #ff6b35;
+}
+
+/* Dropdowns */
+.student-dashboard-courses-sort,
+.student-dashboard-courses-status,
+.student-dashboard-courses-teacher {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+.student-dashboard-courses-sort:focus,
+.student-dashboard-courses-status:focus,
+.student-dashboard-courses-teacher:focus {
+  outline: none;
+  border-color: #ff6b35;
+}
+
+
+
+/* Responsive Adjustments */
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+========================================= */
+
+/* ----------- 1024px (Small Laptops / Large Tablets) ----------- */
+@media (max-width: 1024px) {
+
+  /* Course Grid → 2 columns */
+  .student-dashboard-course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Filters wrap */
+  .student-dashboard-courses-filters-row {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .student-dashboard-courses-filter-col {
+    flex: 1 1 48%;
+  }
+
+  /* Instructor card image smaller */
+  .instructor-card-img {
+    height: 200px;
+  }
+}
+
+
+/* ----------- 768px (Tablets) ----------- */
+@media (max-width: 768px) {
+
+  /* Course Grid → 1 column */
+  .student-dashboard-course-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  /* Filters stacked */
+  .student-dashboard-courses-filters-row {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 16px;
+  }
+
+  .student-dashboard-courses-filter-col {
+    width: 100%;
+  }
+
+  /* Instructor Cards */
+  .instructor-card {
+    min-height: auto;
+  }
+
+  .instructor-card-img {
+    height: 180px;
+  }
+
+  .instructor-card-content {
+    padding: 16px;
+  }
+
+  /* Pagination */
+  .student-dashboard-pagination {
+    gap: 12px;
+    margin: 28px 0;
+  }
+
+  .student-dashboard-pagination-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ----------- 480px (Mobile) ----------- */
+@media (max-width: 480px) {
+
+  /* Reduce spacing */
+  .student-dashboard-course-grid {
+    gap: 16px;
+  }
+
+  .instructor-card-img {
+    height: 160px;
+  }
+
+  .instructor-card-title {
+    font-size: 1rem;
+  }
+
+  .instructor-card-role {
+    font-size: 0.9rem;
+  }
+
+  .instructor-card-meta-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .instructor-card-btn {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+
+  /* Filters */
+  .student-dashboard-courses-search,
+  .student-dashboard-courses-sort,
+  .student-dashboard-courses-status,
+  .student-dashboard-courses-teacher {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  /* Pagination tighter */
+  .student-dashboard-pagination-btn {
+    width: 34px;
+    height: 34px;
+  }
+}

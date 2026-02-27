@@ -1,0 +1,222 @@
+:root{
+  --bg-soft:#f5f7f8;
+  --panel-bg:#fff;
+  --muted:#9ca3af;
+  --border:#ececec;
+  --accent:#ff6b35;
+}
+
+.settings-page-shell { background:var(--bg-soft); padding:28px 24px; }
+
+.instructor-wishlist-container,
+.wishlist-container {
+  max-width: 1200px;
+  margin: 18px auto 0 auto;
+}
+.wishlist-title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 18px;
+  color:#111827;
+}
+.instructor-settings-panel {
+  background:var(--panel-bg);
+  border-radius:12px;
+  box-shadow:0 6px 30px rgba(16,24,40,0.06);
+  padding:34px;
+  display:flex;
+  gap:36px;
+  align-items:flex-start;
+}
+
+/* compact header spacing for settings page */
+.instructor-dashboard-header.compact {
+  margin-bottom: 12px; /* reduce gap below header */
+  padding-bottom: 12px;
+}
+
+.settings-form-row { display:flex; gap:18px; }
+.settings-form-col { flex:1; display:flex; flex-direction:column; gap:10px; }
+.settings-input { padding:14px 12px; border-radius:8px; border:1px solid var(--border); font-size:15px; background: #fff; color:#111827; width:100%; box-sizing:border-box; }
+.settings-input::placeholder{ color:#c7cdd6 }
+label {
+  display:block;
+  font-size:13px;
+  color:#374151;
+  margin-bottom:8px;
+  font-weight:500;
+}
+
+.settings-form-row + * { margin-top:0; }
+.settings-row-block { margin-bottom:16px; }
+
+/* ensure single-column blocks take full width */
+.settings-form > .settings-section > div { width:100%; }
+
+.profile-upload-outer { background:#f3f5f6; border-radius:10px; padding:20px; width:320px; display:flex; justify-content:center; }
+.profile-upload-box { background:#fff; border-radius:6px; padding:0; width:100%; display:flex; flex-direction:column; align-items:center; overflow:hidden; }
+.profile-preview { width:100%; height:220px; background:#f1eaea; display:block; object-fit:cover; }
+.profile-avatar-wrapper { display:flex; justify-content:center; align-items:center; padding:28px 0 12px; }
+.profile-avatar { width:120px; height:120px; border-radius:50%; object-fit:cover; box-shadow:0 8px 24px rgba(16,24,40,0.08); border:4px solid #fff; }
+.upload-overlay { position:relative; width:100%; }
+.upload-btn { position:absolute; left:0; right:0; bottom:0; margin:0 auto; background:rgba(16,24,40,0.75); color:#fff; padding:12px 0; text-align:center; font-weight:600; cursor:pointer; }
+.upload-hint { color:var(--muted); font-size:13px; margin-top:12px; text-align:center; padding:12px; }
+.save-btn { background:var(--accent); color:#fff; border:none; border-radius:6px; font-weight:600; font-size:15px; padding:10px 18px; cursor:pointer; }
+
+.settings-form { flex:1; background:transparent; }
+.settings-form .settings-section { background:transparent; border-radius:8px; padding:0; }
+.settings-form .settings-actions { margin-top:12px; }
+
+.settings-input:focus { outline:none; box-shadow:0 0 0 4px rgba(255,107,53,0.08); border-color:rgba(255,107,53,0.2); }
+.phone-code { appearance:none; -webkit-appearance:none; border-radius:8px; padding-left:10px; }
+.phone-row{ display:flex; gap:12px; align-items:center; }
+.phone-row .settings-input{ flex:1; }
+.settings-textarea { resize:vertical; min-height:140px; border-radius:8px; padding:12px; }
+.char-counter { position:absolute; right:12px; top:12px; color:var(--muted); font-size:13px; }
+
+.settings-page-shell { background:var(--bg-soft); padding:18px; border-radius:0; }
+
+
+
+
+
+/* Social Profile styles */
+.social-section { background: var(--panel-bg); border-radius:8px; padding:0; }
+.social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top:8px; }
+.social-item label { font-size:13px; color:var(--muted); margin-bottom:6px; display:block; }
+.social-input-wrapper { display:flex; align-items:center; gap:10px; }
+.social-icon { min-width:36px; height:36px; border-radius:6px; background:#fef7f3; display:flex; align-items:center; justify-content:center; color:#ff6b35; font-weight:700; }
+.settings-input { padding:10px 12px; border-radius:8px; border:1px solid var(--border); width:100%; box-sizing:border-box; }
+.social-section .settings-input::placeholder { color:#bfc6cc; }
+
+
+
+
+/* Notifications & Change Password panels */
+.settings-two-col { display:grid; grid-template-columns: 1fr 1fr; gap:20px; max-width:1200px; margin:22px auto 0; }
+.settings-panel { background:var(--panel-bg); border-radius:8px; padding:22px; box-shadow:0 4px 18px rgba(16,24,40,0.03); }
+.notifications-list { display:flex; flex-direction:column; gap:10px; }
+.notif-item { display:flex; align-items:flex-start; gap:12px; font-size:14px; color:#374151; }
+.notif-item input[type=checkbox] { width:18px; height:18px; accent-color:var(--accent); margin-top:4px; }
+.notif-item span { line-height:1.2; }
+
+.input-with-icon { position:relative; }
+.input-with-icon .eye { position:absolute; right:12px; top:50%; transform:translateY(-50%); cursor:pointer; opacity:0.7; }
+.input-with-icon .settings-input { padding-right:44px; }
+
+
+/* ================= SETTINGS PAGE RESPONSIVE ================= */
+
+/* ---------- Large Tablet (1200px ↓) ---------- */
+@media (max-width: 1200px) {
+
+  .instructor-settings-panel {
+    flex-direction: column;
+    padding: 28px;
+  }
+
+  .profile-upload-outer {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .settings-two-col {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* ---------- Tablet (992px ↓) ---------- */
+@media (max-width: 992px) {
+
+  .settings-form-row {
+    flex-direction: column;
+  }
+
+  .settings-page-shell {
+    padding: 16px;
+  }
+
+  .instructor-settings-panel {
+    gap: 24px;
+  }
+
+  .profile-preview {
+    height: 200px;
+  }
+
+}
+
+
+/* ---------- Large Mobile (768px ↓) ---------- */
+@media (max-width: 768px) {
+
+  .instructor-wishlist-container,
+  .wishlist-container {
+    padding: 0 14px;
+  }
+
+  .instructor-settings-panel {
+    padding: 20px;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-two-col {
+    gap: 16px;
+  }
+
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-preview {
+    height: 160px;
+  }
+
+  .settings-textarea {
+    min-height: 120px;
+  }
+
+}
+
+
+/* ---------- Small Mobile (480px ↓) ---------- */
+@media (max-width: 480px) {
+
+  .wishlist-title {
+    font-size: 18px;
+  }
+
+  .settings-input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .settings-panel {
+    padding: 16px;
+  }
+
+  .save-btn {
+    width: 100%;
+  }
+
+  .upload-btn {
+    font-size: 14px;
+  }
+
+  .profile-upload-outer {
+    padding: 16px;
+  }
+
+}

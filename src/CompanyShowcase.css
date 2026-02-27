@@ -1,0 +1,200 @@
+.company-layout {
+  width: 100%;
+  background: #fff;
+  padding: 0;
+}
+.company-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 0 0 0;
+}
+.company-top-left {
+  flex: 1 1 340px;
+  max-width: 400px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 16px;
+}
+.company-top-left h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.company-top-left p {
+  color: #6b7280;
+  font-size: 1.08rem;
+}
+.company-top-right {
+  flex: 2 1 600px;
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.company-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px 36px;
+  width: 100%;
+}
+.company-logo-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px 0 rgba(44, 62, 80, 0.08);
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  min-height: 60px;
+}
+.company-logo-card img {
+  max-width: 90px;
+  max-height: 36px;
+  object-fit: contain;
+}
+.company-bottom {
+  width: 100%;
+  background: #fff;
+  margin-top: 32px;
+  padding-bottom: 32px;
+}
+.company-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.company-stats > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+.stat-main {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.stat-main.orange { color: #ff6b35; }
+.stat-main.blue { color: #6366f1; }
+.stat-main.red { color: #ff5722; }
+.stat-main.green { color: #22c55e; }
+.stat-main.gold { color: #ffb300; }
+.company-stats span:last-child {
+  color: #23262f;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* -------- Large Tablets -------- */
+@media (max-width: 1200px) {
+  .company-logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+
+/* -------- Tablets -------- */
+@media (max-width: 992px) {
+
+  .company-top {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 0 20px;
+    text-align: center;
+  }
+
+  .company-top-left {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .company-top-right {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .company-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .company-stats {
+    gap: 28px;
+  }
+}
+
+
+/* -------- Large Mobile -------- */
+@media (max-width: 768px) {
+
+  .company-top-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .company-top-left p {
+    font-size: 1rem;
+  }
+
+  .company-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .company-logo-card {
+    padding: 14px 18px;
+  }
+
+  .company-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .company-stats > div {
+    width: 100%;
+  }
+}
+
+
+/* -------- Mobile Devices -------- */
+@media (max-width: 480px) {
+
+  .company-top {
+    padding: 32px 16px 0 16px;
+  }
+
+  .company-logos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-logo-card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .stat-main {
+    font-size: 1.3rem;
+  }
+
+  .company-stats span:last-child {
+    font-size: 0.95rem;
+  }
+
+}

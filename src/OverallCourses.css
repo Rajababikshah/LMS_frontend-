@@ -1,0 +1,282 @@
+.overall-top {
+  background: transparent;
+  padding: 24px 0 8px 0;
+}
+.overall-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+.overall-top-inner {
+  display: grid;
+  grid-template-columns: 160px 1fr 180px;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Filter panel */
+.overall-filter-backdrop {
+  display: none;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+.overall-filter-backdrop.open {
+  display: block;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 40;
+  opacity: 1;
+}
+
+.overall-filter-panel {
+  position: fixed;
+  left: 0;
+  top: 72px;
+  width: 320px;
+  max-width: 90vw;
+  height: calc(100% - 96px);
+  background: #fbfbfb; /* subtle off-white background to match panel area */
+  border-radius: 10px;
+  border: 1px solid #efecec;
+  box-shadow: 0 12px 40px rgba(18,24,34,0.12);
+  transform: translateX(-110%);
+  opacity: 0;
+  transition: transform 260ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
+  z-index: 50;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+}
+.overall-filter-panel.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+.filter-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:12px;
+}
+.filter-header h3 { margin:0; font-size:13px; color:#222; }
+.filter-close { background:none; border:none; font-size:20px; cursor:pointer }
+.filter-section { font-size:13px; color:#333 }
+/* make the section scrollable while keeping header and actions visible */
+.filter-section {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* section cards inside the scroll area use a light white card background for contrast */
+.section { background: #fff; padding: 10px; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 6px 18px rgba(12,24,36,0.03); }
+.filter-group { padding:10px 0; border-bottom:1px solid #f1f1f1 }
+.filter-group-title { font-weight:700; margin-bottom:8px; color:#111 }
+.filter-items label { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:6px 4px; cursor:pointer }
+.filter-items label input { margin-right:8px }
+.filter-items .count { color:#999; font-size:12px }
+.filter-group.compact .filter-group-title { font-weight:600 }
+
+.course-meta { color:#666; font-size:13px }
+
+/* New filter sections styling */
+.section { margin-bottom:14px }
+.price-options label,
+.rating-controls label,
+.filter-items label { display:flex; align-items:center; gap:8px; padding:6px 4px; }
+.price-options label input[type="radio"],
+.rating-controls label input[type="radio"] { margin-right:8px }
+.filter-actions { display:flex; gap:10px; justify-content:flex-end; margin-top:12px; position: sticky; bottom: 0; padding-top: 8px; background: linear-gradient(transparent, rgba(251,251,251,0.95)); }
+.btn-clear, .btn-apply { padding:8px 12px; border-radius:8px; cursor:pointer; border:1px solid transparent; font-weight:600 }
+.btn-clear { background:#fff; color:#666; border-color:#eee }
+.btn-apply { background:#ff6b35; color:#fff; box-shadow:0 8px 18px rgba(255,107,53,0.12) }
+
+.rating-controls label { font-size:14px }
+.rating-controls label input { transform:translateY(1px) }
+
+/* make checkboxes and radio more visible */
+input[type="checkbox"], input[type="radio"] { width:14px; height:14px }
+
+/* compact counts */
+.count { font-size:12px; color:#999 }
+
+
+
+/* Filter button active state */
+.filter-btn.active {
+  background: #fff6f0;
+  color: #ff6b35;
+  border: 1px solid rgba(255,107,53,0.18);
+  box-shadow: 0 4px 14px rgba(255,107,53,0.08);
+}
+
+/* Responsive: small screens show wider panel and keep it centered-left */
+
+.filter-btn {
+  background: #fff6f1;
+  color: #ff6b35;
+  border: 1px solid #ffe6da;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(255,107,53,0.04);
+}
+.filter-count {
+  background: rgba(255,107,53,0.12);
+  color: #ff6b35;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.overall-search {
+  width: 100%;
+}
+.overall-search-input {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 6px 20px rgba(41,41,41,0.04);
+  font-size: 1rem;
+}
+.overall-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.overall-sort {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+.overall-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+.overall-suggestions span {
+  color: #ff6b35;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.overall-suggestions {
+  color: #6b7280;
+}
+.overall-results {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+
+/* ================= OVERALL TOP RESPONSIVE ================= */
+
+/* ---------- Large Tablet (1200px ↓) ---------- */
+@media (max-width: 1200px){
+
+  .overall-container{
+    padding: 0 18px;
+  }
+
+  .overall-top-inner{
+    gap: 14px;
+  }
+
+  .overall-sort{
+    font-size: 14px;
+  }
+
+}
+
+
+/* ---------- Tablet (992px ↓) ---------- */
+@media (max-width: 992px){
+
+  .overall-top-inner{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .overall-actions{
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .overall-filter-panel{
+    top: 64px;
+    height: calc(100% - 80px);
+  }
+
+  .overall-meta{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+}
+
+
+/* ---------- Large Mobile (768px ↓) ---------- */
+@media (max-width: 768px){
+
+  .overall-container{
+    padding: 0 14px;
+  }
+
+  .filter-btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .overall-actions{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .overall-sort{
+    width: 100%;
+  }
+
+  .overall-filter-panel{
+    width: 85%;
+    top: 56px;
+    height: calc(100% - 70px);
+    border-radius: 0 12px 12px 0;
+  }
+
+}
+
+
+/* ---------- Small Mobile (480px ↓) ---------- */
+@media (max-width: 480px){
+
+  .overall-search-input{
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .filter-btn{
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .filter-actions{
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-apply,
+  .btn-clear{
+    width: 100%;
+  }
+
+}

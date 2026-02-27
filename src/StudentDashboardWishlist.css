@@ -1,0 +1,252 @@
+/* Wishlist Page Styles */
+.wishlist-container {
+  max-width: 1100px;
+  margin: 32px auto 0 auto;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+.wishlist-title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.wishlist-table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #0001;
+  padding: 0;
+  overflow: hidden;
+}
+.wishlist-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.wishlist-table thead {
+  background: #fafbfc;
+}
+.wishlist-table th {
+  text-align: left;
+  padding: 18px 18px;
+  font-weight: 600;
+  color: #888;
+  font-size: 15px;
+}
+.wishlist-table td {
+  padding: 18px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f2f2f2;
+}
+.wishlist-course-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.wishlist-course-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.wishlist-course-details {
+  display: flex;
+  flex-direction: column;
+}
+.wishlist-course-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+.wishlist-course-rating {
+  color: #ff6b35;
+  font-weight: 700;
+  font-size: 15px;
+  margin-right: 6px;
+}
+.wishlist-course-reviews {
+  color: #888;
+  font-weight: 500;
+  font-size: 14px;
+}
+.wishlist-course-authors {
+  color: #bdbdbd;
+  font-size: 13px;
+  margin-top: 2px;
+}
+.wishlist-price {
+  color: #ff6b35;
+  font-weight: 700;
+  font-size: 18px;
+}
+.wishlist-old-price {
+  color: #bdbdbd;
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 8px;
+  text-decoration: line-through;
+}
+.wishlist-action-btn {
+  background: #f6f6f6;
+  color: #23262f;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 22px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.wishlist-action-btn.buy {
+  background: #f6f6f6;
+  color: #23262f;
+}
+.wishlist-action-btn.cart {
+  background: #ff6b35;
+  color: #fff;
+}
+.wishlist-action-btn.heart {
+  background: #fff6f1;
+  color: #ff6b35;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px;
+  margin-right: 0;
+}
+.wishlist-action-btn:hover {
+  opacity: 0.92;
+}
+
+
+/* =========================================
+   WISHLIST RESPONSIVE
+========================================= */
+
+/* -------- 1024px (Tablets / Small Laptops) -------- */
+@media (max-width: 1024px) {
+
+  .wishlist-container {
+    padding: 0 24px;
+  }
+
+  .wishlist-course-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .wishlist-action-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+
+/* -------- 768px (Tablet Portrait) -------- */
+@media (max-width: 768px) {
+
+  .wishlist-container {
+    padding: 0 16px;
+  }
+
+  /* Make table scrollable if needed */
+  .wishlist-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .wishlist-table th,
+  .wishlist-table td {
+    padding: 14px;
+  }
+
+  .wishlist-course-info {
+    gap: 12px;
+  }
+
+  .wishlist-price {
+    font-size: 16px;
+  }
+
+  .wishlist-old-price {
+    font-size: 14px;
+  }
+
+  .wishlist-action-btn {
+    margin-bottom: 6px;
+  }
+}
+
+
+/* -------- 480px (Mobile) -------- */
+@media (max-width: 480px) {
+
+  .wishlist-title {
+    font-size: 20px;
+  }
+
+  /* Convert table into stacked card layout */
+  .wishlist-table thead {
+    display: none;
+  }
+
+  .wishlist-table,
+  .wishlist-table tbody,
+  .wishlist-table tr,
+  .wishlist-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .wishlist-table tr {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #0001;
+    margin-bottom: 16px;
+    padding: 12px;
+  }
+
+  .wishlist-table td {
+    border: none;
+    padding: 8px 0;
+  }
+
+  /* Course info full width */
+  .wishlist-course-info {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .wishlist-course-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .wishlist-course-title {
+    font-size: 15px;
+  }
+
+  .wishlist-course-rating,
+  .wishlist-course-reviews {
+    font-size: 13px;
+  }
+
+  /* Price section */
+  .wishlist-price {
+    font-size: 16px;
+  }
+
+  .wishlist-old-price {
+    font-size: 13px;
+  }
+
+  /* Buttons stacked */
+  .wishlist-action-btn {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .wishlist-action-btn.heart {
+    width: 100%;
+  }
+}

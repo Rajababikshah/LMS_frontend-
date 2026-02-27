@@ -1,0 +1,147 @@
+.trusted-companies-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 48px;
+  margin: 48px 0;
+}
+
+.trusted-companies-content {
+  max-width: 320px;
+}
+
+.trusted-companies-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.trusted-companies-content p {
+  color: #888;
+  font-size: 1rem;
+}
+
+.trusted-companies-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.company-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 160px;
+}
+
+.company-card img {
+  max-width: 100px;
+  max-height: 40px;
+  object-fit: contain;
+}
+
+
+
+/* =========================================
+   TRUSTED COMPANIES RESPONSIVE
+========================================= */
+
+/* ---------- 1200px (Smaller desktops) ---------- */
+@media (max-width: 1200px) {
+
+  .trusted-companies-section {
+    padding: 0 24px;
+  }
+
+  .trusted-companies-logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ---------- 1024px (Tablets Landscape) ---------- */
+@media (max-width: 1024px) {
+
+  .trusted-companies-section {
+    gap: 32px;
+  }
+
+  .trusted-companies-content {
+    max-width: 280px;
+  }
+
+  .trusted-companies-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .trusted-companies-logos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .company-card {
+    width: 140px;
+    height: 75px;
+  }
+}
+
+
+/* ---------- 768px (Tablets Portrait) ---------- */
+@media (max-width: 768px) {
+
+  /* Stack vertically */
+  .trusted-companies-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    padding: 0 20px;
+  }
+
+  .trusted-companies-content {
+    max-width: 100%;
+  }
+
+  .trusted-companies-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .company-card {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+
+/* ---------- 480px (Mobile) ---------- */
+@media (max-width: 480px) {
+
+  .trusted-companies-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .trusted-companies-content p {
+    font-size: 0.95rem;
+  }
+
+  .trusted-companies-logos {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .company-card {
+    height: 70px;
+    max-width: 100%;
+  }
+
+  .company-card img {
+    max-width: 90px;
+    max-height: 35px;
+  }
+}

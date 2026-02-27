@@ -1,0 +1,157 @@
+.landing-cta-stats{
+	background:#23262f;
+	color:#fff;
+	padding:56px 0 48px;
+	margin-top:28px;
+	border-top:1px solid rgba(255,255,255,0.03);
+}
+.landing-cta-inner{
+	max-width:1200px;
+	margin:0 auto;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	gap:30px;
+	padding:0 28px;
+	box-sizing:border-box;
+    margin-left: 250px;
+    margin-right: 220px;
+}
+.landing-cta-left h2{
+	margin:0;
+	font-size:34px;
+	line-height:1.02;
+	font-weight:800;
+	letter-spacing:-0.3px;
+}
+.landing-cta-left p{margin:8px 0 0;color:rgba(255,255,255,0.78);font-size:14px}
+.landing-cta-actions{margin-top:18px;display:flex;gap:12px}
+.cta-primary{
+	background:#ff6b35;
+	color:#fff;
+	border:none;
+	padding:12px 18px;
+	border-radius:6px;
+	cursor:pointer;
+	font-weight:800;
+	box-shadow:0 10px 30px rgba(255,107,53,0.12);
+	transition:transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+}
+.cta-primary:hover{transform:translateY(-2px);filter:brightness(1.02)}
+.cta-secondary{
+	background:#2a2a2c;
+	color:#ddd;
+	border:1px solid rgba(255,255,255,0.03);
+	padding:11px 16px;
+	border-radius:6px;
+	cursor:pointer;
+	transition:background 160ms ease, color 160ms ease;
+}
+.cta-secondary:hover{background:#343436}
+.landing-cta-right{display:flex;gap:28px;align-items:center}
+.stat-item{
+	background:transparent;
+	padding:8px 12px;
+	border-radius:6px;
+	text-align:center;
+	min-width:120px;
+}
+.stat-value{font-size:28px;font-weight:900;color:#ffffff}
+.stat-label{font-size:13px;color:#ffffff;margin-top:6px}
+
+/* subtle divider line between section and footer */
+.landing-cta-stats:after{content:"";display:block;height:1px;background:rgba(224, 220, 220, 0.02);margin-top:22px}
+
+
+/* ================= CTA RESPONSIVE ================= */
+
+/* ---------- Large Tablet ---------- */
+@media (max-width: 1200px){
+
+  .landing-cta-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:40px;
+  }
+
+  .landing-cta-right{
+    width:100%;
+    justify-content:space-between;
+  }
+
+}
+
+
+/* ---------- Tablet ---------- */
+@media (max-width: 992px){
+
+  .landing-cta-left h2{
+    font-size:28px;
+  }
+
+  .landing-cta-actions{
+    flex-wrap:wrap;
+  }
+
+  .stat-value{
+    font-size:24px;
+  }
+
+}
+
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px){
+
+  .landing-cta-stats{
+    padding:40px 0;
+  }
+
+  .landing-cta-inner{
+    padding:0 18px;
+  }
+
+  .landing-cta-left h2{
+    font-size:24px;
+    line-height:1.2;
+  }
+
+  .landing-cta-left p{
+    font-size:13px;
+  }
+
+  .landing-cta-right{
+    flex-wrap:wrap;
+    gap:18px;
+  }
+
+  .stat-item{
+    min-width:100px;
+  }
+
+}
+
+
+/* ---------- Small Mobile ---------- */
+@media (max-width: 480px){
+
+  .landing-cta-actions{
+    flex-direction:column;
+    width:100%;
+  }
+
+  .cta-primary,
+  .cta-secondary{
+    width:100%;
+    text-align:center;
+  }
+
+  .landing-cta-right{
+    justify-content:space-between;
+  }
+
+  .stat-value{
+    font-size:20px;
+  }
+
+}

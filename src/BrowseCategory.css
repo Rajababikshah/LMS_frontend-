@@ -1,0 +1,162 @@
+.browse-category-section {
+  width: 100%;
+  background: #fff;
+  padding: 56px 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.browse-category-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #23262f;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.browse-category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 80vw;
+  max-width: 1100px;
+  margin-bottom: 32px;
+}
+
+.browse-category-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  border-radius: 8px;
+  padding: 14px 14px 10px 14px;
+  box-shadow: 0 4px 16px 0 rgba(31, 41, 55, 0.06);
+  min-width: 150px;
+  min-height: 60px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.browse-category-card:hover {
+  box-shadow: 0 8px 24px 0 rgba(31, 41, 55, 0.12);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.browse-category-icon {
+  font-size: 2.1rem;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.browse-category-label {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #23262f;
+  margin-bottom: 4px;
+}
+
+.browse-category-courses {
+  font-size: 0.98rem;
+  color: #6b7280;
+}
+
+.browse-category-footer {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.browse-all {
+  color: #ff6b35;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.browse-all .arrow {
+  font-size: 1.1em;
+  margin-left: 2px;
+}
+
+
+
+/* Responsive adjustments */
+/* ================= RESPONSIVE ================= */
+
+/* -------- Large Tablets -------- */
+@media (max-width: 1200px) {
+  .browse-category-grid {
+    grid-template-columns: repeat(3, 1fr);
+    width: 90vw;
+  }
+}
+
+
+/* -------- Tablets -------- */
+@media (max-width: 992px) {
+
+  .browse-category-title {
+    font-size: 2rem;
+  }
+
+  .browse-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+
+/* -------- Large Mobile -------- */
+@media (max-width: 768px) {
+
+  .browse-category-section {
+    padding: 48px 20px;
+  }
+
+  .browse-category-title {
+    font-size: 1.7rem;
+    margin-bottom: 28px;
+  }
+
+  .browse-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 18px;
+  }
+
+  .browse-category-card {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .browse-category-label {
+    font-size: 1rem;
+  }
+
+  .browse-category-courses {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* -------- Mobile Devices -------- */
+@media (max-width: 480px) {
+
+  .browse-category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .browse-category-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .browse-category-title {
+    font-size: 1.5rem;
+  }
+
+  .browse-category-footer {
+    font-size: 0.95rem;
+  }
+
+}
