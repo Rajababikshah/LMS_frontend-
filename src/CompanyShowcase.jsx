@@ -11,9 +11,18 @@ const CompanyShowcase = () => (
       </div>
       <div className="company-top-right">
         <div className="company-logos-grid">
-          {["Netflix","YouTube","Google","Lenovo","Slack","verizon","Lexmark","Microsoft"].map((name, i) => (
+          {[
+            { name: "Netflix", file: "netflix.png" },
+            { name: "YouTube", file: "youtube.png" },
+            { name: "Google", file: "google.png" },
+            { name: "Lenovo", file: "lenovo.png" },
+            { name: "Slack", file: "slack.png" },
+            { name: "Verizon", file: "verizon.png" },
+            { name: "Lexmark", file: "lexmark.png" },
+            { name: "Microsoft", file: "microsoft.png" }
+          ].map(({ name, file }) => (
             <div className="company-logo-card" key={name}>
-              <img src={`https://logo.clearbit.com/${name.toLowerCase().replace(/[^a-z]/g,"")}.com`} alt={name} />
+              <img src={require(`./assets/${file}`)} alt={name} />
             </div>
           ))}
         </div>

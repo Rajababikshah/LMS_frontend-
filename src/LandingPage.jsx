@@ -448,20 +448,20 @@ function LandingPage() {
                 <button className="cta-secondary">Browse All Courses</button>
               </div>
             </div>
-            <div className="landing-cta-right">
-              <div className="stat-item">
-                <div className="stat-value">6.3k</div>
-                <div className="stat-label">Online courses</div>
+              <div className="landing-cta-right">
+                <div className="stat-item">
+                  <div className="stat-value" style={{ color: '#fff' }}>6.3k</div>
+                  <div className="stat-label" style={{ color: '#fff' }}>Online courses</div>
+                </div>
+                <div className="stat-item">
+                  <div className="stat-value" style={{ color: '#fff' }}>26k</div>
+                  <div className="stat-label" style={{ color: '#fff' }}>Certified Instructor</div>
+                </div>
+                <div className="stat-item">
+                  <div className="stat-value" style={{ color: '#fff' }}>99.9%</div>
+                  <div className="stat-label" style={{ color: '#fff' }}>Success Rate</div>
+                </div>
               </div>
-              <div className="stat-item">
-                <div className="stat-value">26k</div>
-                <div className="stat-label">Certified Instructor</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-value">99.9%</div>
-                <div className="stat-label">Success Rate</div>
-              </div>
-            </div>
           </div>
         </section>
       <FooterSection />
