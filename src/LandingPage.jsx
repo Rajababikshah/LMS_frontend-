@@ -4,6 +4,14 @@ import './BestSellingCourses.css';
 import './FeatureCourses.css';
 import './InstructorSection.css';
 import './TrustedCompanies.css';
+import netflixLogo from "./assets/netflix.png";
+import youtubeLogo from "./assets/youtube.png";
+import googleLogo from "./assets/google.png";
+import lenovoLogo from "./assets/lenovo.png";
+import slackLogo from "./assets/slack.png";
+import verizonLogo from "./assets/verizon.png";
+import lexmarkLogo from "./assets/lexmark.png";
+import microsoftLogo from "./assets/microsoft.png";
 import './LandingFooterCTA.css';
 import MainSectionLayout from "./MainSectionLayout";
 import headerImg from './assets/header-img.jpg';
@@ -343,14 +351,14 @@ const InstructorSection = () => {
 
 // TrustedCompanies
 const companies = [
-  { name: "Netflix", logo: "/src/assets/netflix.png" },
-  { name: "YouTube", logo: "/src/assets/youtube.png" },
-  { name: "Google", logo: "/src/assets/google.png" },
-  { name: "Lenovo", logo: "/src/assets/lenovo.png" },
-  { name: "Slack", logo: "/src/assets/slack.png" },
-  { name: "Verizon", logo: "/src/assets/verizon.png" },
-  { name: "Lexmark", logo: "/src/assets/lexmark.png" },
-  { name: "Microsoft", logo: "/src/assets/microsoft.png" },
+  { name: "Netflix", logo: netflixLogo },
+  { name: "YouTube", logo: youtubeLogo },
+  { name: "Google", logo: googleLogo },
+  { name: "Lenovo", logo: lenovoLogo },
+  { name: "Slack", logo: slackLogo },
+  { name: "Verizon", logo: verizonLogo },
+  { name: "Lexmark", logo: lexmarkLogo },
+  { name: "Microsoft", logo: microsoftLogo },
 ];
 const TrustedCompanies = () => (
   <section className="trusted-companies-section">
